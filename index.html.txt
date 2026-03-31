@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Ім'я Прізвище | Особиста сторінка</title>
+    <style>
+        /* Скидання стилів та базові налаштування */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Картка */
+        .card {
+            max-width: 550px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(0px);
+            border-radius: 48px;
+            padding: 40px 32px;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.25);
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.01);
+        }
+
+        /* Аватар (опціонально) */
+        .avatar {
+            width: 120px;
+            height: 120px;
+            background: #2c3e66;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: 500;
+            color: white;
+            background: linear-gradient(145deg, #1e2a3a, #0f172a);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Ім'я та біо */
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #0a1927;
+        }
+
+        .bio {
+            color: #4a5568;
+            margin-bottom: 32px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Секції */
+        .section-title {
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #2c3e66;
+            margin: 24px 0 12px 0;
+            border-left: 3px solid #2c3e66;
+            padding-left: 12px;
+        }
+
+        /* Сітка соцмереж */
+        .social-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .social-link {
+            background: #f1f5f9;
+            padding: 12px 20px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 500;
+            color: #1e293b;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .social-link:hover {
+            background: #2c3e66;
+            color: white;
+            border-color: #2c3e66;
+            transform: translateY(-2px);
+        }
+
+        /* Список плейлистів */
+        .playlist-list {
+            list-style: none;
+            text-align: left;
+        }
+
+        .playlist-list li {
+            margin-bottom: 12px;
+        }
+
+        .playlist-link {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: #f8fafc;
+            padding: 14px 20px;
+            border-radius: 28px;
+            text-decoration: none;
+            color: #0f172a;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .playlist-link:hover {
+            background: #f1f5f9;
+            border-color: #cbd5e1;
+            transform: translateX(5px);
+        }
+
+        .playlist-emoji {
+            font-size: 1.6rem;
+        }
+
+        .playlist-info {
+            flex: 1;
+        }
+
+        .playlist-name {
+            font-weight: 600;
+        }
+
+        .playlist-desc {
+            font-size: 0.75rem;
+            color: #475569;
+        }
+
+        /* футер */
+        .footer {
+            margin-top: 40px;
+            font-size: 0.75rem;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 24px;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 28px 20px;
+            }
+            .social-link {
+                padding: 10px 16px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- Аватар (можна замінити на фото) -->
+        <div class="avatar">
+            👤
+        </div>
+
+        <h1>Ім'я Прізвище</h1>
+        <div class="bio">
+            🎧 Ділюся музикою, думками та творчістю.<br>
+            Ласкаво прошу на мою особисту сторінку.
+        </div>
+
+        <!-- СОЦІАЛЬНІ МЕРЕЖІ -->
+        <div class="section-title">📱 Соціальні мережі</div>
+        <div class="social-grid">
+            <a href="https://t.me/ваш_нікнейм" target="_blank" rel="noopener noreferrer" class="social-link">📩 Telegram</a>
+            <a href="https://www.tiktok.com/@ваш_нікнейм" target="_blank" rel="noopener noreferrer" class="social-link">🎵 TikTok</a>
+            <a href="https://instagram.com/ваш_нікнейм" target="_blank" rel="noopener noreferrer" class="social-link">📸 Instagram</a>
+            <a href="https://youtube.com/@ваш_нікнейм" target="_blank" rel="noopener noreferrer" class="social-link">▶️ YouTube</a>
+        </div>
+
+        <!-- ПЛЕЙЛИСТИ (музика, подкасти, добірки) -->
+        <div class="section-title">🎧 Улюблені плейлисти / добірки</div>
+        <ul class="playlist-list">
+            <li>
+                <a href="https://open.spotify.com/playlist/ваш_плейлист" target="_blank" rel="noopener noreferrer" class="playlist-link">
+                    <span class="playlist-emoji">🎧</span>
+                    <div class="playlist-info">
+                        <div class="playlist-name">Для натхнення</div>
+                        <div class="playlist-desc">Lo-fi, електроніка, інді</div>
+                    </div>
+                    <span>🔗</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://music.youtube.com/playlist?list=ваш_плейлист" target="_blank" rel="noopener noreferrer" class="playlist-link">
+                    <span class="playlist-emoji">🚗</span>
+                    <div class="playlist-info">
+                        <div class="playlist-name">Дорожній настрій</div>
+                        <div class="playlist-desc">Pop, rock, українське</div>
+                    </div>
+                    <span>🔗</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://soundcloud.com/ваш_користувач/sets/ваш_сет" target="_blank" rel="noopener noreferrer" class="playlist-link">
+                    <span class="playlist-emoji">🌙</span>
+                    <div class="playlist-info">
+                        <div class="playlist-name">Вечірній мікс</div>
+                        <div class="playlist-desc">Ambient, джаз, акустика</div>
+                    </div>
+                    <span>🔗</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- можна додати додатковий блок, наприклад, контактний email -->
+        <div class="footer">
+            📧 hello@yourname.com<br>
+            💡 Оновлено березень 2026
+        </div>
+    </div>
+</body>
+</html>
